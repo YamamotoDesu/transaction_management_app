@@ -27,7 +27,7 @@ class _MainScreenHostState extends State<MainScreenHost> {
         return const HomeScreenTab();
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

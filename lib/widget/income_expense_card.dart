@@ -26,6 +26,14 @@ class IncomeExpenseCard extends StatelessWidget {
       height: 70,
       padding: const EdgeInsets.all(defaultSpacing / 3),
       decoration: BoxDecoration(
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            offset: Offset.zero,
+            spreadRadius: 3,
+            blurRadius: 12,
+          )
+        ],
         color: expenseData.label == "Income" ? primaryDark : secondaryLight,
         borderRadius: BorderRadius.circular(defaultSpacing),
       ),
@@ -44,7 +52,8 @@ class IncomeExpenseCard extends StatelessWidget {
                         ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: defaultSpacing, right: defaultSpacing),
+                    padding: const EdgeInsets.only(
+                        left: defaultSpacing, right: defaultSpacing),
                     child: Text(
                       expenseData.amount,
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -56,7 +65,10 @@ class IncomeExpenseCard extends StatelessWidget {
                 ],
               ),
             ),
-            Icon(expenseData.icon, color: Colors.white,),
+            Icon(
+              expenseData.icon,
+              color: Colors.white,
+            ),
           ],
         ),
       ),
